@@ -21,7 +21,8 @@
     <context:component-scan base-package="concerttours"/>
      <!-- Hybris123SnippetEnd -->
 
-     <!-- Hybris123SnippetStart injectingDefaultBandService -->
+    <!-- Hybris123SnippetStart injectingDefaultBandService -->
+
      <alias name = "defaultBandService" alias = "bandService" />
      <bean id = "defaultBandService" class = "concerttours.service.impl.DefaultBandService" >
          <property name = "bandDAO" ref = "bandDAO" />
@@ -124,6 +125,13 @@
      <!-- Hybris123SnippetStart injectingConcertDaysUntilAttributeHandler -->
     <bean id="concertDaysUntilAttributeHandler" class="concerttours.attributehandlers.ConcertDaysUntilAttributeHandler"/>
  	<!-- Hybris123SnippetEnd -->
-    
+ 	
+     <!-- Hybris123SnippetStart injectingEventListener -->
+    <bean id="concerttourEventListener" class="concerttours.events.NewBandEventListener" parent="abstractEventListener">
+      <property name="modelService" ref="modelService" />
+    </bean>
+ 	<!-- Hybris123SnippetEnd -->
+ 
+
     
 </beans>
