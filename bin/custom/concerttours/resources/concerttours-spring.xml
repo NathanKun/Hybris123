@@ -21,8 +21,7 @@
     <context:component-scan base-package="concerttours"/>
      <!-- Hybris123SnippetEnd -->
 
-    <!-- Hybris123SnippetStart injectingDefaultBandService -->
-
+     <!-- Hybris123SnippetStart injectingDefaultBandService -->
      <alias name = "defaultBandService" alias = "bandService" />
      <bean id = "defaultBandService" class = "concerttours.service.impl.DefaultBandService" >
          <property name = "bandDAO" ref = "bandDAO" />
@@ -131,7 +130,7 @@
       <property name="modelService" ref="modelService" />
     </bean>
  	<!-- Hybris123SnippetEnd -->
-    
+ 
     <!-- Hybris123SnippetStart injectingInterceptor -->
     <bean id="bandAlbumSalesInterceptor" class="concerttours.interceptors.BandAlbumSalesInterceptor" />
     <bean id="BandInterceptorMapping" class="de.hybris.platform.servicelayer.interceptor.impl.InterceptorMapping">
@@ -143,4 +142,16 @@
 	</bean>
 	<!-- Hybris123SnippetEnd -->
  
+    <!-- Hybris123SnippetStart injectingNewService -->
+	<alias name="defaultNewsService" alias="newsService" />
+	<bean id="defaultNewsService" class="concerttours.service.impl.DefaultNewsService">
+	    <property name="newsDAO" ref="newsDAO" />
+	</bean>
+	<bean id="sendNewsJob" class="concerttours.jobs.SendNewsJob" parent="abstractJobPerformable">
+	    <property name="newsService" ref="newsService" />
+	</bean>
+	<!-- Hybris123SnippetEnd -->
+ 
+
+    
 </beans>
