@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN!
- * --- Generated at 27 févr. 2018 13:50:24
+ * --- Generated at 27 févr. 2018 14:34:27
  * ----------------------------------------------------------------
  *
  * [y] hybris Platform
@@ -44,6 +44,10 @@ public  class ConcertSummaryData  implements Serializable
 	/** <i>Generated property</i> for <code>ConcertSummaryData.type</code> property defined at extension <code>concerttours</code>. */
 		
 	private String type;
+
+	/** <i>Generated property</i> for <code>ConcertSummaryData.countDown</code> property defined at extension <code>concerttours</code>. */
+		
+	private Long countDown;
 	
 	public ConcertSummaryData()
 	{
@@ -104,6 +108,20 @@ public  class ConcertSummaryData  implements Serializable
 	public String getType() 
 	{
 		return type;
+	}
+	
+		
+	
+	public void setCountDown(final Long countDown)
+	{
+		this.countDown = countDown;
+	}
+
+		
+	
+	public Long getCountDown() 
+	{
+		return countDown;
 	}
 	
 
