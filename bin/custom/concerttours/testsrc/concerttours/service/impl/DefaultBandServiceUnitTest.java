@@ -1,15 +1,4 @@
-// Hybris123SnippetStart concerttours.service.impl.DefaultBandServiceUnitTest
-/*
- * [y] hybris Platform
- *
- * Copyright (c) 2000-2017 SAP SE
- * All rights reserved.
- *
- * This software is the confidential and proprietary information of SAP
- * Hybris ("Confidential Information"). You shall not disclose such
- * Confidential Information and shall use it only in accordance with the
- * terms of the license agreement you entered into with SAP Hybris.
- */
+// Hybris123SnippetStart concerttours.service.impl.DefaultBandServiceUnitTest_LocalizedImport
 package concerttours.service.impl;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
@@ -22,7 +11,9 @@ import org.junit.Before;
 import org.junit.Test;
 import concerttours.daos.BandDAO;
 import concerttours.model.BandModel;
- 
+import java.util.Locale;
+// Hybris123SnippetEnd  
+
 /**
  * This test file tests and demonstrates the behavior of the BandService's methods getAllBand, getBand and saveBand.
  *
@@ -57,7 +48,9 @@ public class DefaultBandServiceUnitTest
         bandModel.setCode(BAND_CODE);
         bandModel.setName(BAND_NAME);
         bandModel.setAlbumSales(null);
-        bandModel.setHistory(BAND_HISTORY);
+     // Hybris123SnippetStart concerttours.service.impl.DefaultBandServiceUnitTest_Localized
+        bandModel.setHistory(BAND_HISTORY, Locale.ENGLISH);
+     // Hybris123SnippetEnd  
     }
     /**
      * This test tests and demonstrates that the Service's getAllBands method calls the DAOs' getBands method and returns

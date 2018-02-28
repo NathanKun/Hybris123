@@ -156,6 +156,18 @@
 				<Loader platformHome="D:\hybris\hybris6\hybris\bin\platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
 			</Context>
 
+			<!-- 'backoffice' extension's context for tenant 'master' -->
+			<Context path="/backoffice" docBase="D:\hybris\hybris6\hybris\bin\ext-backoffice\backoffice/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="D:\hybris\hybris6\hybris\bin\platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+			</Context>
+
+			<!-- 'yempty' extension's context for tenant 'master' -->
+			<Context path="/yempty" docBase="D:\hybris\hybris6\hybris\bin\ext-template\yempty/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="D:\hybris\hybris6\hybris\bin\platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+			</Context>
+
 			<!-- 'concerttours' extension's context for tenant 'master' -->
 			<Context path="/concerttours" docBase="D:\hybris\hybris6\hybris\bin\custom\concerttours/web/webroot" >
 				<Manager pathname="" />
