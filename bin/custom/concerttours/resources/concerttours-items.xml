@@ -90,11 +90,15 @@
 		            <description>short unique code of band</description>
 		            <persistence type="property" />
 		        </attribute>
-		        <attribute qualifier="name" type="java.lang.String">
-		            <description>name of band</description>
-		            <persistence type="property" />
-		        </attribute>
-	  <!-- Hybris123SnippetStart concerttours-items.xml_localizeHistory -->
+<!-- Hybris123SnippetStart concerttours-items.xml_validation -->
+<attribute qualifier="name" type="java.lang.String">
+        <description>name of band</description>
+        <persistence type="property" />
+        <modifiers optional="false" unique="true" />
+</attribute>
+          <!-- Hybris123SnippetEnd -->
+    
+  <!-- Hybris123SnippetStart concerttours-items.xml_localizeHistory -->
 		        <attribute qualifier="history" type="localized:java.lang.String">
 		            <description>history of band</description>
 		            <persistence type="property" />
