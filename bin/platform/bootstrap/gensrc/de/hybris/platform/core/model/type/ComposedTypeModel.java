@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 28 févr. 2018 11:53:21                      ---
+ * --- Generated at 28 févr. 2018 11:59:15                      ---
  * ----------------------------------------------------------------
  *  
  * [y] hybris Platform
@@ -44,6 +44,9 @@ public class ComposedTypeModel extends TypeModel
 	
 	/**<i>Generated relation code constant for relation <code>SyncJob2TypeRel</code> defining source attribute <code>syncJobs</code> in extension <code>catalog</code>.</i>*/
 	public static final String _SYNCJOB2TYPEREL = "SyncJob2TypeRel";
+	
+	/**<i>Generated relation code constant for relation <code>IndexTypeRelation</code> defining source attribute <code>indexConfigurations</code> in extension <code>lucenesearch</code>.</i>*/
+	public static final String _INDEXTYPERELATION = "IndexTypeRelation";
 	
 	/** <i>Generated constant</i> - Attribute key of <code>ComposedType.abstract</code> attribute defined at extension <code>core</code>. */
 	public static final String ABSTRACT = "abstract";
@@ -122,6 +125,9 @@ public class ComposedTypeModel extends TypeModel
 	
 	/** <i>Generated constant</i> - Attribute key of <code>ComposedType.syncJobs</code> attribute defined at extension <code>catalog</code>. */
 	public static final String SYNCJOBS = "syncJobs";
+	
+	/** <i>Generated constant</i> - Attribute key of <code>ComposedType.indexConfigurations</code> attribute defined at extension <code>lucenesearch</code>. */
+	public static final String INDEXCONFIGURATIONS = "indexConfigurations";
 	
 	
 	/**

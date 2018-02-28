@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 28 févr. 2018 11:53:21                      ---
+ * --- Generated at 28 févr. 2018 11:59:15                      ---
  * ----------------------------------------------------------------
  *  
  * [y] hybris Platform
@@ -128,6 +128,12 @@ public class AttributeDescriptorModel extends DescriptorModel
 	
 	/** <i>Generated constant</i> - Attribute key of <code>AttributeDescriptor.dontCopy</code> attribute defined at extension <code>catalog</code>. */
 	public static final String DONTCOPY = "dontCopy";
+	
+	/** <i>Generated constant</i> - Attribute key of <code>AttributeDescriptor.forceLuceneIndexable</code> attribute defined at extension <code>lucenesearch</code>. */
+	public static final String FORCELUCENEINDEXABLE = "forceLuceneIndexable";
+	
+	/** <i>Generated constant</i> - Attribute key of <code>AttributeDescriptor.hmcIndexField</code> attribute defined at extension <code>lucenesearch</code>. */
+	public static final String HMCINDEXFIELD = "hmcIndexField";
 	
 	
 	/**
@@ -293,6 +299,16 @@ public class AttributeDescriptorModel extends DescriptorModel
 	}
 	
 	/**
+	 * <i>Generated method</i> - Getter of the <code>AttributeDescriptor.forceLuceneIndexable</code> attribute defined at extension <code>lucenesearch</code>. 
+	 * @return the forceLuceneIndexable
+	 */
+	@Accessor(qualifier = "forceLuceneIndexable", type = Accessor.Type.GETTER)
+	public Boolean getForceLuceneIndexable()
+	{
+		return getPersistenceContext().getPropertyValue(FORCELUCENEINDEXABLE);
+	}
+	
+	/**
 	 * <i>Generated method</i> - Getter of the <code>AttributeDescriptor.hiddenForUI</code> attribute defined at extension <code>core</code>. 
 	 * @return the hiddenForUI
 	 */
@@ -300,6 +316,16 @@ public class AttributeDescriptorModel extends DescriptorModel
 	public Boolean getHiddenForUI()
 	{
 		return getPersistenceContext().getPropertyValue(HIDDENFORUI);
+	}
+	
+	/**
+	 * <i>Generated method</i> - Getter of the <code>AttributeDescriptor.hmcIndexField</code> attribute defined at extension <code>lucenesearch</code>. 
+	 * @return the hmcIndexField
+	 */
+	@Accessor(qualifier = "hmcIndexField", type = Accessor.Type.GETTER)
+	public String getHmcIndexField()
+	{
+		return getPersistenceContext().getPropertyValue(HMCINDEXFIELD);
 	}
 	
 	/**
@@ -573,6 +599,17 @@ public class AttributeDescriptorModel extends DescriptorModel
 	}
 	
 	/**
+	 * <i>Generated method</i> - Setter of <code>AttributeDescriptor.forceLuceneIndexable</code> attribute defined at extension <code>lucenesearch</code>. 
+	 *  
+	 * @param value the forceLuceneIndexable
+	 */
+	@Accessor(qualifier = "forceLuceneIndexable", type = Accessor.Type.SETTER)
+	public void setForceLuceneIndexable(final Boolean value)
+	{
+		getPersistenceContext().setPropertyValue(FORCELUCENEINDEXABLE, value);
+	}
+	
+	/**
 	 * <i>Generated method</i> - Setter of <code>AttributeDescriptor.hiddenForUI</code> attribute defined at extension <code>core</code>. 
 	 *  
 	 * @param value the hiddenForUI
@@ -581,6 +618,17 @@ public class AttributeDescriptorModel extends DescriptorModel
 	public void setHiddenForUI(final Boolean value)
 	{
 		getPersistenceContext().setPropertyValue(HIDDENFORUI, value);
+	}
+	
+	/**
+	 * <i>Generated method</i> - Setter of <code>AttributeDescriptor.hmcIndexField</code> attribute defined at extension <code>lucenesearch</code>. 
+	 *  
+	 * @param value the hmcIndexField
+	 */
+	@Accessor(qualifier = "hmcIndexField", type = Accessor.Type.SETTER)
+	public void setHmcIndexField(final String value)
+	{
+		getPersistenceContext().setPropertyValue(HMCINDEXFIELD, value);
 	}
 	
 	/**

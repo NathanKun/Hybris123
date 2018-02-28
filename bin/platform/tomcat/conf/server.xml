@@ -156,6 +156,18 @@
 				<Loader platformHome="D:\hybris\hybris6\hybris\bin\platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
 			</Context>
 
+			<!-- 'embeddedserver' extension's context for tenant 'master' -->
+			<Context path="/embeddedserver" docBase="D:\hybris\hybris6\hybris\bin\ext-platform-optional\embeddedserver/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="D:\hybris\hybris6\hybris\bin\platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+			</Context>
+
+			<!-- 'tomcatembeddedserver' extension's context for tenant 'master' -->
+			<Context path="/tomcatembeddedserver" docBase="D:\hybris\hybris6\hybris\bin\ext-platform-optional\tomcatembeddedserver/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="D:\hybris\hybris6\hybris\bin\platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+			</Context>
+
 			<!-- 'backoffice' extension's context for tenant 'master' -->
 			<Context path="/backoffice" docBase="D:\hybris\hybris6\hybris\bin\ext-backoffice\backoffice/web/webroot" >
 				<Manager pathname="" />
@@ -164,6 +176,18 @@
 
 			<!-- 'yempty' extension's context for tenant 'master' -->
 			<Context path="/yempty" docBase="D:\hybris\hybris6\hybris\bin\ext-template\yempty/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="D:\hybris\hybris6\hybris\bin\platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+			</Context>
+
+			<!-- 'platformwebservices' extension's context for tenant 'master' -->
+			<Context path="/ws410" docBase="D:\hybris\hybris6\hybris\bin\ext-platform-optional\platformwebservices/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="D:\hybris\hybris6\hybris\bin\platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
+			</Context>
+
+			<!-- 'platformwebservices' extension's context for tenant 'junit' -->
+			<Context path="/ws410_junit" docBase="D:\hybris\hybris6\hybris\bin\ext-platform-optional\platformwebservices/web/webroot" >
 				<Manager pathname="" />
 				<Loader platformHome="D:\hybris\hybris6\hybris\bin\platform" className="de.hybris.tomcat.HybrisWebappLoader" deployName="default" />
 			</Context>
