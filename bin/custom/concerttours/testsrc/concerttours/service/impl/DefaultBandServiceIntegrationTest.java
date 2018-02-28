@@ -1,4 +1,3 @@
-// Hybris123SnippetStart concerttours.service.impl.DefaultBandServiceIntegrationTest
 package concerttours.service.impl;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -71,10 +70,12 @@ public class DefaultBandServiceIntegrationTest extends ServicelayerTest
      * This test tests and demonstrates that the Service's getAllBand method calls the DAOs' getAllBand method and
      * returns the data it receives from it.
      */
+ // Hybris123SnippetStart concerttours.service.impl.DefaultBandServiceIntegrationTestWithImportCSV
     @Test
     public void testBandServiceTours() throws Exception
     {
         createCoreData();
+        importCsv("/impex/essentialdata-mediaformats.impex", "UTF-8");
         importCsv("/impex/concerttours-bands.impex", "utf-8");
         importCsv("/impex/concerttours-yBandTour.impex", "utf-8");
         final BandModel band = bandService.getBandForCode("A001");
@@ -87,5 +88,5 @@ public class DefaultBandServiceIntegrationTest extends ServicelayerTest
         assertNotNull("No tour found", tours);
         Assert.assertEquals("not found one tour", 6, concerts.size());
     }
+  //Hybris123SnippetEnd
 }
-//Hybris123SnippetEnd

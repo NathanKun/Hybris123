@@ -1,4 +1,3 @@
-// Hybris123SnippetStart concerttours.facades.impl.DefaultBandFacadeIntegrationTest
 package concerttours.facades.impl;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -13,6 +12,7 @@ import org.junit.Test;
 import concerttours.data.BandData;
 import concerttours.facades.BandFacade;
 import concerttours.model.BandModel;
+ 
  
 /**
  * This test file tests and demonstrates the behavior of the BandFacade's methods getAllBands and getBand.
@@ -34,10 +34,14 @@ public class DefaultBandFacadeIntegrationTest extends ServicelayerTransactionalT
     private static final String BAND_HISTORY = "New contemporary, 7-piece Jaz unit from London, formed in 2015";
     /** Albums sold by test band. */
     private static final Long ALBUMS_SOLD = Long.valueOf(10L);
+    
+    // Hybris123SnippetStart concerttours.facades.impl.DefaultBandFacadeIntegrationTestWithImportCSV
     @Before
-    public void setUp()
+    public void setUp() throws Exception
     {
-        // This instance of a BandModel will be used by the tests
+    	importCsv("/impex/essentialdata-mediaformats.impex", "UTF-8");
+    	
+    	// This instance of a BandModel will be used by the tests
         bandModel = modelService.create(BandModel.class); 
         bandModel.setCode(BAND_CODE);
         bandModel.setName(BAND_NAME);      
@@ -45,6 +49,8 @@ public class DefaultBandFacadeIntegrationTest extends ServicelayerTransactionalT
         bandModel.setHistory(BAND_HISTORY);
         bandModel.setAlbumSales(ALBUMS_SOLD);
     }
+    //Hybris123SnippetEnd
+    
     /**
      * Tests exception behavior by getting a band which doesn't exist
      */
@@ -86,4 +92,3 @@ public class DefaultBandFacadeIntegrationTest extends ServicelayerTransactionalT
         assertEquals(BAND_HISTORY, persistedBandData.getDescription());
     }
 }
-//Hybris123SnippetEnd
